@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <link rel="stylesheet" href="css/loginstyle.css"> 
+    <title>Login Form</title>
+</head>
+<body>
+   
+   
+    <form  name="myform" onsubmit="return test()"  action="index.html">
+        <h1>LOGIN</h1>
+        
+        
+        <input type="text" name="fn" for="fnn"  placeholder="User Name"  class="j">
+        <br><br>
+       
+        <input type="password" name="ps" for="pss"  class="j" placeholder="Password">
+        <br><br>
+        <input type="submit" value="Login"  class="j">
+        <p>Forget password?</p>
+    
+    </form>
+ <script>
+            function test(){
+                var narr=["nancy","radwa","hend","yasmin"];
+                var parr=["123","456","789","1011"];
+                var name=document.forms["myform"]["fn"].value;
+                var pas=document.forms["myform"]["ps"].value;
+for(var i=0;i<4;i++){
+    if((name==narr[i])&&(pas==parr[i]))
+    return true;
+    else if(name=="" ||pas==""){
+         alert("Login faild")
+         return false;
+                    }
+}
+return false;
+            }
+ </script>
+
+   
+    
+</body>
+</html>
